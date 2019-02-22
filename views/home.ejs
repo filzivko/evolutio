@@ -1,0 +1,58 @@
+<% include partials/header %>
+
+<div></div>
+
+    <div class="mobile coverPicDiv">
+    <img class="mobile coverPicImg" src="https://images.unsplash.com/photo-1546614409-810f10108b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=3291&q=80">        
+    <h1 class="coverPic coverPicH1">EVOLUTIO</h1>
+    <h3 class="coverPic coverPicH3">The Future, Today</h3>    
+    </div>
+
+    <div class="main coverPicDiv parallax">
+    <h1 class="coverPic coverPicH1">EVOLUTIO</h1>
+    <h3 class="coverPic coverPicH3">The Future, Today</h3>    
+    </div>
+
+<% var initPoint=articles.length-1 %>
+
+<% displayBanner(); %>
+
+<% function displayBanner(){%>
+
+  <div class="row">
+      <% for(i=initPoint; i>(initPoint-6); i--){var article= articles[i];%>
+    <div class="imgDiv col-xl-2 col-lg-4 col-sm-6 col-12 text-center">
+        <a href="/articles/<%=article._id%>">
+            <div class="fullSel"></div>
+            <p class="homeTitle" > <%= article.title %> </p>
+            <p class="hideText"><%=(article.articleBody).substring(0,300)%> ...</p>
+            <img class = "homeImg" src= "<%= article.image %>">
+        </a>   
+        <% if(i===5){%>
+        <!--<a href="#">-->
+        <!--    <button id="nextSlide" type="button" class="btn btn-default btn-lg slideBut">-->
+        <!--       <i class="fas fa-chevron-circle-right"></i>-->
+        <!--    </button>-->
+        <!--</a>           -->
+        <% }; %>   
+    </div>
+    <% }; %>
+  </div>
+<% }; %>
+
+<div class="holder">
+    <% for(i=initPoint-6; i>=0; i--){var article= articles[i];%>
+    <a href="/articles/<%=article._id%>">
+    <div class="homeList">
+        <span class="dateTab"><%= article.created_at.getDate() %>/<%= article.created_at.getMonth()+1 %>/<%= article.created_at.getFullYear() %> </span> 
+        <img class="homeImgSml" src="<%= article.image %>">             
+        <h4 class="homeTitleSml" ><%= article.title %></h4>
+        <p class="homeBodySml"><%=(article.articleBody).substring(0,300)%> ...</p>            
+    </div>
+     </a>
+       <% }; %>
+</div>
+
+
+
+<% include partials/footer %>

@@ -1,0 +1,510 @@
+.main{
+    display: none;
+}
+
+
+.homeImg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 0;
+}
+
+
+.imgDiv{
+   padding: 0;
+
+}
+
+.homeTitle{
+    font-size: 3em;
+    font-weight: 600;
+    color: white;
+    /*text-shadow: 2px 2px  2px black,  0 2px  5px black, 2px 0 7px black;*/
+    text-shadow:    0 0 2px black, 
+    /*0 0 3px black, 0 0 4px black, 0 0 5px black, */
+    /*                0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, */
+                    0 0 2px black, 0 0 10px black, 0 0 2px black, 0 0 11px black, 
+                    0 0 2px black, 0 0 12px black, 0 0 2px black, 0 0 13px black,
+                    0 0 2px black, 0 0 14px black, 0 0 2px black, 
+                    0 0 15px black;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+}
+
+.pageImg{
+    width: 400px;
+    height: 600px;
+    float: left;
+    margin: 20px;
+    object-fit: cover;
+}
+
+.thinContainer{
+    width: 100%;
+    height: 100%;
+    /*text-align: justify;*/
+    display: inline-block;
+    background-color: #f4f4f4;
+    margin: 2%;
+}
+
+
+.row{
+    margin-bottom: 50px;
+    width: 102.5%;
+}
+
+.bigText{
+    width: 800px;
+    height: 1200px;
+}
+
+.hideText{
+    color: transparent;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 10% 10% 10% 10%;
+    font-size: 2em;
+}
+
+.fullSel{
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    z-index: 6;
+}
+
+.fullSel:hover ~ .hideText{
+    color: white;
+    text-shadow:    0 0 2px black, 
+    0 0 3px black, 0 0 4px black, 0 0 5px black, 
+                    0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, 
+                    0 0 2px black, 0 0 10px black, 0 0 2px black, 0 0 11px black, 
+                    0 0 2px black, 0 0 12px black, 0 0 2px black, 0 0 13px black,
+                    0 0 2px black, 0 0 14px black, 0 0 2px black, 
+                    0 0 15px black;
+    background-color: rgba(250,250,250,0.6);
+}
+
+
+.fullSel:hover + .homeTitle{
+    color: transparent;
+    text-shadow: 0 0 transparent;
+}
+
+
+.articleBodyInput{
+    width: 300px;
+    height: 600px;
+}
+
+.searchImg{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 3px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+.searchDiv{
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 80%;
+    height: 210px;
+    color: black;
+}
+
+a:hover {
+   text-decoration:none;
+}
+
+
+
+.slideBut{
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: transparent;
+}
+
+.slideBut:hover{
+    background-color: rgb(214, 214, 214, 0.7);
+}
+
+
+
+.holder{
+    width: 90%;
+    margin: auto;
+
+}
+
+.homeList{
+    width: 100%;
+    height: auto;
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+    margin:5px;
+    background: rgb(242, 242, 242);
+    overflow: hidden;
+}
+
+.homeImgSml{
+    height: 400px;
+    width: 30%;
+    float: left;
+    margin: 1em;
+    object-fit: cover;
+}
+
+.homeTitleSml{
+    color: black;
+    margin: 2px;
+    width: 100%;
+    font-size: 3em;
+}
+.homeBodySml{
+    color: black;
+    margin: 1em;
+    padding: 1px;
+    font-size: 2.5em;
+}
+
+body{
+    background-color: rgb(234, 234, 234);
+}
+
+.dateTab{
+    margin:0; 
+    position: relative;
+    z-index: 3;
+    left: 0;
+    width: 100px;
+    padding-right: 7em;
+    color: rgb(150, 150, 150);
+            font-size: 2em;
+}
+
+.footerDiv{
+    background-color: rgba(0,0,0,1);
+    color: rgb(142, 142, 142);
+    height: 200px;
+    width: 101%;
+    margin: 0;
+}
+
+.brandFooter{
+    top: 0;
+    font-family: 'Libre Barcode 128 Text', cursive;
+    font-size: 100px;
+}
+
+.footerLeft{
+    float: left;
+    height: auto;
+}
+
+.footerRight{
+    display: inline-block;
+    text-align: center;
+    height: auto;
+    width: 80%;
+    padding: 5px;
+}
+
+.scrollbar {
+    vertical-align:top;
+    height: 300px;
+    width: 100%;
+    margin: 5px;
+    overflow-x: scroll;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+    
+
+.inline{
+    display: inline-block;
+}
+
+.imgSmlScroll{
+    height: 80%;
+    width: 40%;
+    float: left;
+    vertical-align: top;
+    
+}
+
+.scrollDiv{
+    height: 300px;
+    width: 50%;
+    background-color: white;
+    margin: 5px 3px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.titleScroll{
+    font-size: 2em;
+    font-weight: 600;
+    color: black;
+    width: 90%;
+    margin: 0 5px;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.bodyScroll{
+    width: 55%;
+    height:70%;
+    margin: 0 5px;
+    font-size: 1.5em;
+    color: black;
+    white-space:normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+}
+
+.evoFont{
+    font-family: 'Libre Barcode 128 Text', cursive;
+    vertical-align: center;
+    margin: 0;
+    font-size: 70px;
+}
+
+.navbar-brand{
+    margin: 0;
+    padding: 0;
+}
+
+.whiteSpace{
+    white-space: pre-line;
+    margin: 0 2%;
+    font-size: 2.5em;
+}
+
+.jerome{
+    z-index: 50;
+    color: green;
+    position: absolute;
+    background-color: red;
+    top: 300px;
+}
+
+.coverPicDiv{
+    height: 800px;
+    width: 101%;
+    text-align: center;
+    background-image: url("https://images.unsplash.com/photo-1546614409-810f10108b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=3291&q=80");
+    object-fit: cover;
+    /*background-image: url("https://images.unsplash.com/photo-1546614409-810f10108b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=3291&q=80");*/
+    /*object-fit: cover;*/
+  /*background-attachment: fixed;*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+}
+
+.coverPicImg{
+    object-fit: cover;
+    width: 100%;
+    height: 800px;
+  background-attachment: fixed;
+}
+
+.coverPic{
+    position: absolute;
+    top: 50px;
+    z-index: 3;
+    color: white;
+}
+
+.coverPicH1 {
+    margin-top: 100px;
+    font-family: 'Libre Barcode 128 Text', cursive;
+    font-size: 10em;
+    padding-left: 20px;
+}
+
+.coverPicH3 {
+    margin-top: 280px;
+    font-size: 2em;
+        padding-left: 20px;
+    
+}
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  border-width: 0 0 1px;
+  z-index: 10;
+}
+
+
+.navbar-fixed-top {
+  top: 0;
+}
+
+.homeBrandImg{
+    top: 50px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    left: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.parallax { 
+   /*The image used */
+  /*background-image: url("https://images.unsplash.com/photo-1546614409-810f10108b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=3291&q=80");*/
+
+   /*Full height */
+  /*height: 800px; */
+  /*width: 101%;*/
+  /*      object-fit: contain;*/
+        
+   /*Create the parallax scrolling effect */
+  /*background-attachment: fixed;*/
+  /*background-position: center bottom;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+}
+
+
+.articleTitlePage{
+    font-size: 5em;
+    margin: 50px 0;
+}
+
+.titleBlockPage{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.authorDatePageDiv{
+    display: inline-block;
+    width: 100%;
+    margin: 5px 0;
+    font-size: 0.5em;
+}
+
+
+.sharePageDiv{
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    margin: 0;
+    vertical-align: top;
+}
+
+.dateTabPage{
+        margin: 1% 2%;
+}
+
+.authorPage{
+        margin: 1% 2%;
+}
+
+.authorDate{
+    width: 49%;
+    font-size: 1.25em;
+}
+
+
+.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  min-height: 100px;
+}
+
+.navbar-brand {
+  padding: 0 30px;
+  height: 100px;
+  line-height: 100px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 43px;
+  padding: 9px 10px !important;
+}
+
+.navbar-toggler{
+      height: 70px;
+  width: 70px;
+}
+
+.navbar-toggler-icon{
+      height: 50px;
+  width: 50px;
+}
+
+.form-control.col-auto{
+      height: 100px;
+  width: 600px;
+  font-size: 50px;
+}
+
+.btn.btn-outline-success.my-2.my-sm-0{
+    height: 100px;
+    width: 150px;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+
+.btn-xs{
+    width: 200px;
+    height: 100px;
+    font-size: 3em;
+}
+
+.headerSpacer{
+    height: 75px;
+}
+
+.contactUs{
+     color: inherit;
+     padding-left: 10px;
+     font-size: 2em;
+}
+
+.fab {
+    padding-left: 10px;
+    font-size: 4em;
+}
+

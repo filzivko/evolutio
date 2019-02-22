@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+
+
+<p class="showingResults">Showing results for "<%=search%>"</p>
+
+<div class="searchCont">
+<% articles.forEach(function(article){ %> 
+    <% if((article.key).includes(search)){ %>
+        <a href="/articles/<%=article._id%>">
+            <div class="searchDiv">
+                <img class="searchImg" src= "<%= article.image %>">                    
+                <h4><%=article.title%></h4>
+                <p><%=(article.articleBody).substring(0,900)%> ...</p>                
+            </div>    
+        </a>
+    <% } else { %>
+    <% } %>
+<% }); %>    
+</div>
+
+
+
+
+<% include partials/footer %>
+

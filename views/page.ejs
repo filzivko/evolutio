@@ -1,0 +1,89 @@
+<% include partials/header %>
+
+<% var count;%>
+<% for(i=0; i<articles.length; i++){ if((articles[i]._id).equals(article._id)) { %>
+<% count=i; console.log(i)};}; %>
+<% console.log(articles[count]._id);%>
+
+<div class="pageContDiv">
+    <div class="thinContainer">
+    <div class="titleBlockPage">
+    <h1 class="articleTitlePage"><%=article.title%><h1>
+    <hr>
+    
+    <div class="authorDatePageDiv">
+        <div class="authorDate inline">
+        <div class="authorPage">Author: <%=article.author.username%></div>
+        <div class="dateTabPage"><%= article.created_at.getDate() %>/<%= article.created_at.getMonth()+1 %>/<%= article.created_at.getFullYear() %> </div> 
+        </div>
+
+        <div class="sharePageDiv">
+            <div class="sharethis-inline-share-buttons"></div>
+        <!--    <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank"><i class="fab fa-facebook-square"></i></a>-->
+        <!--<i class="fab fa-twitter-square"></i><i class="fab fa-linkedin"></i><i class="fab fa-facebook-messenger"></i>-->
+        </div>
+    </div>
+
+    <hr>
+    </div>    
+
+    <img class = "pageImg" src= "<%= article.image %>">
+    
+    <p class="whiteSpace wordwrap"><%= article.articleBody %></p>
+    
+    <% if(articles[(count-1)]){ %>
+    <!--<a href="/articles/<%=articles[(count-1)]._id%>">-->
+    <!--    <button class="btn btn-xs btn-warning">Previous</button>-->
+    <!--</a>-->
+    <% }; %>
+    <% if(articles[(count+1)]){ %>
+    
+    <% if (currentUser){ %>        
+    <form class="delete-form d-inline" action="/<%=article._id%>?_method=DELETE" method="POST">
+        <button class="btn btn-xs btn-danger"> Delete </button>
+    </form>
+    <a href="/articles/<%=article._id%>/edit">
+        <button class="btn btn-xs btn-warning" > Edit </button>
+    </a>
+    <% }; %>
+    
+    <!--<a href="/articles/<%=articles[(count+1)]._id%>">-->
+    <!--    <button class="btn btn-xs btn-warning"> Next</button>-->
+    <!--</a>    -->
+    <% }; %>   
+    <div>
+        Tags : <%=article.key%>            
+    </div>
+    </div>
+
+
+<div class="scrollbar inline">
+   
+    <% for(j=articles.length-1; j>0; j--){var Article = articles[j];%>
+    <a href="/articles/<%=Article._id%>">
+        <div class="scrollDiv">
+            <div class="titleScroll"><%= Article.title %></div>              
+            <img class="imgSmlScroll" src="<%= Article.image %>">  
+            <div class="bodyScroll"><%=(Article.articleBody).substring(0,200)%> ...</div> 
+        </div>
+    </a>
+
+    <% }; %>
+    </div>
+</div>
+
+<% include partials/footer %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

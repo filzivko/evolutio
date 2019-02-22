@@ -1,0 +1,627 @@
+.mobile{
+    display: none;
+}
+
+.homeImg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.imgDiv{
+   padding: 0;
+}
+
+.homeTitle{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    /*text-shadow: 2px 2px  2px black,  0 2px  5px black, 2px 0 7px black;*/
+    text-shadow:    0 0 2px black, 
+    /*0 0 3px black, 0 0 4px black, 0 0 5px black, */
+    /*                0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, */
+                    0 0 2px black, 0 0 10px black, 0 0 2px black, 0 0 11px black, 
+                    0 0 2px black, 0 0 12px black, 0 0 2px black, 0 0 13px black,
+                    0 0 2px black, 0 0 14px black, 0 0 2px black, 
+                    0 0 15px black;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+}
+
+
+
+
+.pageImg{
+    width: 400px;
+    height: 600px;
+    float: left;
+    margin: 20px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1500px) {
+.thinContainer{
+    width: 80%;
+    height: 100%;
+    text-align: justify;
+
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid #c1c1c1;
+}
+.scrollbar {
+    vertical-align: top;
+    height: 140px;
+    width: 100%;
+    margin: 5px;
+    overflow-x: scroll;
+    overflow-y: auto;
+    white-space: nowrap;
+    background-color: #f7f7f7;
+    border: 1px solid #c1c1c1;
+}
+.imgSmlScroll{
+    height: 100%;
+    width: 20%;
+    float: left;
+    vertical-align: top;
+    object-fit: cover;
+    margin: 5px;
+}
+
+.scrollDiv{
+    height: 120px;
+    width: 30%;
+    background-color: white;
+    margin: 5px 3px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.titleScroll{
+    font-size: 20px;
+    display: inline-block;
+    font-weight: 600;
+    color: black;
+    width: 55%;
+    margin: 0 5px;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.bodyScroll{
+    /*width: 55%;*/
+    display: inline-block;
+    height:70%;
+    /*margin: 0 5px;*/
+    margin-left: 10px;
+    font-size: 12px;
+    color: black;
+    white-space:normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+}
+}
+
+
+
+@media only screen and (min-width: 1500px) {
+.thinContainer{
+    width: 1000px;
+    height: 100%;
+    text-align: justify;
+    display: inline-block;
+    background-color: white;
+    margin-top: 10px;
+    border: 1px solid #c1c1c1;
+}
+.pageContDiv{
+    width:1450px;
+    margin: auto;
+    text-align: center;
+}
+
+.scrollbar {
+    vertical-align:top;
+    height: 500px;
+    width: 400px;
+    overflow-y: auto;
+    margin: 5px;
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #c1c1c1;
+    text-align: left;
+}
+.imgSmlScroll{
+    height: 90px;
+    width: 90px;
+    float: left;
+    margin: 3px;
+    object-fit: cover;
+}
+
+.scrollDiv{
+    height: 100px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.titleScroll{
+    font-size: 18px;
+    height: 25px;
+    font-weight: 600;
+    width: 70%;
+    margin: 0;
+    margin-left: 5px;
+    color: black;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+
+}
+
+.bodyScroll{
+    font-size: 15px;
+    margin: 0;
+    color: black;
+    height: 70%;
+    margin-left: 95px;
+    margin-right: 5px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+}
+}
+
+
+
+
+
+/*.thinContainer{*/
+/*    width: 55%;*/
+/*    height: 100%;*/
+/*    text-align: justify;*/
+/*    display: inline-block;*/
+/*    background-color: #f4f4f4;*/
+/*    margin-left: 22.5%;*/
+    /*margin-top: 10px;*/
+/*    border: 1px solid #c1c1c1;*/
+/*}*/
+
+
+
+
+
+.row{
+    margin-bottom: 50px;
+}
+
+.bigText{
+    width: 800px;
+    height: 1200px;
+}
+
+.hideText{
+    color: transparent;
+    position: absolute;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 10% 10% 10% 10%;
+    white-space: normal; 
+    overflow: hidden;
+
+}
+
+.fullSel{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 6;
+}
+
+.fullSel:hover ~ .hideText{
+    color: white;
+    text-shadow:    0 0 2px black, 
+    0 0 3px black, 0 0 4px black, 0 0 5px black, 
+                    0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black, 
+                    0 0 2px black, 0 0 10px black, 0 0 2px black, 0 0 11px black, 
+                    0 0 2px black, 0 0 12px black, 0 0 2px black, 0 0 13px black,
+                    0 0 2px black, 0 0 14px black, 0 0 2px black, 
+                    0 0 15px black;
+    background-color: rgba(250,250,250,0.6);
+}
+
+
+.fullSel:hover + .homeTitle{
+    color: transparent;
+    text-shadow: 0 0 transparent;
+}
+
+
+
+
+
+
+.articleBodyInput{
+    width: 300px;
+    height: 600px;
+}
+
+.searchImg{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 3px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+.searchDiv{
+    margin: 10px;
+    border: 1px solid #c1c1c1;
+    border-radius: 5px;
+    width: 80%;
+    height: 210px;
+    color: black;
+    background-color: white;
+}
+
+a:hover {
+   text-decoration:none;
+}
+
+
+
+.slideBut{
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: transparent;
+}
+
+.slideBut:hover{
+    background-color: rgb(214, 214, 214, 0.7);
+}
+
+
+
+.holder{
+    width: 70%;
+    margin: auto;
+
+}
+
+.homeList{
+    width: 100%;
+    height: auto;
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+    margin:5px;
+    background: rgb(242, 242, 242);
+    overflow: hidden;
+}
+
+.homeImgSml{
+    height: 8em;
+    width: 8em;
+    float: left;
+    margin: 1em;
+    object-fit: cover;
+}
+
+.homeTitleSml{
+    color: black;
+    margin: 2px;
+    width: 80%;
+}
+.homeBodySml{
+    color: black;
+    margin: 1em;
+    padding: 1px;
+}
+
+body{
+    background-color: rgb(234, 234, 234);
+}
+
+.dateTab{
+    float: right;
+    padding-right: 2%;
+}
+
+.footerDiv{
+    background-color: rgba(0,0,0,1);
+    color: rgb(142, 142, 142);
+    height: 150px;
+    width: 100%;
+    bottom:0;
+}
+
+.brandFooter{
+    top: 0;
+    font-family: 'Libre Barcode 128 Text', cursive;
+    font-size: 100px;
+}
+
+.footerLeft{
+    float: left;
+    height: auto;
+    width: 10%;
+}
+
+.footerRight{
+    display: inline-block;
+    text-align: center;
+    height: auto;
+    width: 80%;
+
+    /*padding: 5px;*/
+}
+
+/*.scrollbar {*/
+/*    vertical-align:top;*/
+/*    float: right;*/
+/*    height: 500px;*/
+/*    width: 20%;*/
+/*    overflow-y: auto;*/
+/*    margin: 5px;*/
+/*    margin-top: 10px;*/
+/*}*/
+
+.inline{
+    display: inline-block;
+}
+
+
+
+/*.imgSmlScroll{*/
+/*    height: 90px;*/
+/*    width: 90px;*/
+/*    float: left;*/
+/*    object-fit: cover;*/
+/*}*/
+
+/*.scrollDiv{*/
+/*    height: 100px;*/
+/*    background-color: white;*/
+/*    margin: 5px 0;*/
+/*}*/
+
+/*.titleScroll{*/
+/*    font-size: 18px;*/
+/*    height: 25px;*/
+/*    font-weight: 600;*/
+/*    width: 70%;*/
+/*    margin: 0;*/
+/*    margin-left: 5px;*/
+/*    color: black;*/
+/*    display: inline-block;*/
+/*    vertical-align: top;*/
+/*    overflow: hidden;*/
+/*    text-overflow: ellipsis;*/
+/*    white-space: nowrap; */
+
+/*}*/
+
+/*.bodyScroll{*/
+/*    font-size: 15px;*/
+/*    margin: 0;*/
+/*    color: black;*/
+/*    height: 70%;*/
+/*    margin-left: 95px;*/
+/*    margin-right: 5px;*/
+/*    overflow: hidden;*/
+/*    display: -webkit-box;*/
+/*    -webkit-line-clamp: 3;*/
+/*    -webkit-box-orient: vertical;  */
+/*}*/
+
+
+
+
+
+.evoFont{
+    font-family: 'Libre Barcode 128 Text', cursive;
+    vertical-align: center;
+    margin: 0;
+    font-size: 40px;
+}
+
+.navbar-brand{
+    margin: 0;
+    padding: 0;
+}
+
+.whiteSpace{
+    white-space: pre-line;
+    padding: 0 10px;
+}
+
+.coverPicDiv{
+    height: 800px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.coverPic{
+    position: absolute;
+    top: 50px;
+    z-index: 3;
+    color: white;
+    margin-left: 20px;
+}
+
+.coverPicH1 {
+    margin-top: 100px;
+    font-family: 'Libre Barcode 128 Text', cursive;
+    font-size: 10em;
+}
+
+.coverPicH3 {
+    margin-top: 280px;
+    font-size: 1.5em;
+    
+}
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  border-width: 0 0 1px;
+  z-index: 10;
+}
+
+
+.navbar-fixed-top {
+  top: 0;
+}
+
+.homeBrandImg{
+    top: 50px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    left: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.parallax { 
+  /* The image used */
+  background-image: url("https://images.unsplash.com/photo-1546614409-810f10108b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=3291&q=80");
+
+  /* Full height */
+  height: 800px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.articleTitlePage{
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.titleBlockPage{
+    float: right;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.authorDatePageDiv{
+    width: 100%;
+    display: inline-block;
+    height: 40px;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.authorDate{
+    width: 30%;
+}
+
+
+.sharePageDiv{
+    display: inline-block;
+    height: 100%;
+    float: right;
+    padding-right: 10px;
+    width: 50%;
+    margin: 0;
+    vertical-align: top;
+}
+
+.dateTabPage{
+    margin: 1% 2%;
+
+}
+
+.authorPage{
+    margin: 1% 2%;
+}
+
+
+hr{
+    margin: 0 5px;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.showingResults{
+    margin: 100px 0 0 15px;
+    background-color: rgb(242, 242, 242);
+}
+
+.searchCont{
+    background-color: rgb(242, 242, 242);
+}
+
+
+.headerSpacer{
+    height: 75px;
+}
+
+
+
+.row{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.contactUs{
+     color: inherit;
+     margin-left: 10px;
+}
+
+.fab{
+    margin-left: 10px;
+}
+
+
+.sharethis-inline-share-buttons{
+    float: right;
+}
+
+.contactPageClass{
+    width: 100%;
+    height: 100%;
+    padding: 100px 300px 300px;
+    
+}
+
+.contactColorDiv{
+    background-color: #f7f7f7;
+    text-align: center;
+}

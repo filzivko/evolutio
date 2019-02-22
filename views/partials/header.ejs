@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Evolutio</title>       
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen and (min-device-width: 600px)" href="/stylesheets/main.css">
+        <link rel="stylesheet" media="screen and (max-device-width: 600px)" href="/stylesheets/mobile.css" />
+        <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top container-fluid">
+  <a class="navbar-brand" href="/"><p class="evoFont">Evolutio</p></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav col-auto">
+
+      <!--<li class="nav-item dropdown">-->
+      <!--  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+      <!--    Topics-->
+      <!--  </a>-->
+      <!--  <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+      <!--    <a class="dropdown-item" href="#">Space</a>-->
+      <!--    <a class="dropdown-item" href="#">Medcine</a>-->
+      <!--    <a class="dropdown-item" href="#">Transport</a>-->
+      <!--    <a class="dropdown-item" href="#">Society</a>-->
+      <!--    <a class="dropdown-item" href="#">A.I.</a>-->
+      <!--    <a class="dropdown-item" href="#">Start Ups</a>-->
+          
+          
+      <!--    <div class="dropdown-divider"></div>-->
+      <!--    <a class="dropdown-item" href="#">Random Article</a>-->
+          
+          
+      <!--  </div>-->
+      <!--</li>-->
+    </ul>
+    <form action="/search" method="POST" class="form-inline my-2 my-lg-0 mx-auto">
+      <input class="form-control col-auto" type="search" name="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav col-auto">
+    <% if (!currentUser){ %>
+    <!--<li class="nav-item">-->
+    <!--    <a class="nav-link" href="/login">Login</a>-->
+    <!-- </li>-->
+    <!--<li class="nav-item">-->
+    <!--    <a class="nav-link" href="/signup">Sign Up</a>-->
+    <!-- </li>-->
+    <% } else {%>
+    <li class="nav-item">
+        <a class="nav-link"><i class="fas fa-user-circle"></i>  <%=currentUser.username %></a>    
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/logout">Log Out</a>    
+    </li>
+    <% } %>
+    
+    </ul>
+  </div>
+</nav>
+
+<div class="headerSpacer" ></div>
