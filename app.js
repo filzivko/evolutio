@@ -183,5 +183,7 @@ app.get("/logout",function(req, res){
 
 console.log("server is running");
 
-app.listen(process.env.PORT, process.env.IP);
+var porty = process.env.PORT || 3000;
+
+app.listen(porty, process.env.IP);
 
