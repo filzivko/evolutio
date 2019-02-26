@@ -161,12 +161,12 @@ app.get("/logout",function(req, res){
 });
 
 //Sign Up Route
-app.get("/signup", middleware.isLoggedIn, function(req, res){
+app.get("/signup", function(req, res){
     res.render("signup");
 });
 
 //Handling Sign Up Route
-app.post("/signup", middleware.isLoggedIn, function(req, res){
+app.post("/signup", function(req, res){
     req.body.username
     req.body.password
     User.register(new User({username: req.body.username}), req.body.password, function(err, user){
