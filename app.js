@@ -160,25 +160,25 @@ app.get("/logout",function(req, res){
     res.redirect("/");
 });
 
-//Sign Up Route
-app.get("/signup", function(req, res){
-    res.render("signup");
-});
+// //Sign Up Route
+// app.get("/signup", function(req, res){
+//     res.render("signup");
+// });
 
-//Handling Sign Up Route
-app.post("/signup", function(req, res){
-    req.body.username
-    req.body.password
-    User.register(new User({username: req.body.username}), req.body.password, function(err, user){
-        if(err){
-            console.log(err);
-            return res.render('signup');
-        }
-        passport.authenticate("local")(req, res, function(){
-            res.redirect("/");
-        });
-    });
-});
+// //Handling Sign Up Route
+// app.post("/signup", function(req, res){
+//     req.body.username
+//     req.body.password
+//     User.register(new User({username: req.body.username}), req.body.password, function(err, user){
+//         if(err){
+//             console.log(err);
+//             return res.render('signup');
+//         }
+//         passport.authenticate("local")(req, res, function(){
+//             res.redirect("/");
+//         });
+//     });
+// });
 
 
 console.log("server is running");
