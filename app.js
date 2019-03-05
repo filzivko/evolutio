@@ -65,6 +65,7 @@ app.get("/contactus", function(req, res){
 
 //Create Article Route
 app.post("/", middleware.isLoggedIn, function(req, res){
+    console.log("hit new article route");
     var title = req.body.title;
     var image = req.body.image;
     var articleBody = req.body.articleBody;
@@ -78,6 +79,7 @@ app.post("/", middleware.isLoggedIn, function(req, res){
         if (err){
             console.log(err);
         } else {
+            console.log("created new article route");
             res.redirect("/");
         }
     });
