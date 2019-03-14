@@ -59,7 +59,7 @@
 
 <div class="scrollbar inline">
    
-    <% for(j=articles.length-1; j>0; j--){var Article = articles[j];%>
+    <% for(j=articles.length-1; j>=0; j--){var Article = articles[j];%>
     <a href="/articles/<%=Article._id%>">
         <div class="scrollDiv">
             <div class="titleScroll"><%= Article.title %></div>              
