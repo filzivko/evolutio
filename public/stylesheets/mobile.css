@@ -16,8 +16,9 @@
 
 
 .imgDiv{
-   padding: 0;
-
+    padding: 0;
+    object-fit: cover;
+    height: 800px; //changed to fix glitch
 }
 
 .homeTitle{
