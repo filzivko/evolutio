@@ -1,4 +1,4 @@
-This is a full stack web applicaiton built by Filip Zivkovic which allowed the hosting of text based articles. 
+This is a full stack web applicaiton which allowed the hosting of text based articles. 
 The user could input raw text and upload a photo to accompany the article. 
 The website ran for a period of 6 months between late 2019 and mid 2020.
 The website featured authentication passports, ssl cert, carousel article main page, and article pages.
